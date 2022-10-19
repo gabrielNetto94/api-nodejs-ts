@@ -19,8 +19,12 @@ app.use(express.json())
 //utiliza as rotas do sistema
 app.use('/api', routes)
 
+app.get("/api", (req, res) => {
+    return res.json({message: "api working"})
+})
+
 app.listen(port, async () => {
-    
+
     //conecta banco
     // await db()
 
