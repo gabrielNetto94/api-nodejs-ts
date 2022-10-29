@@ -4,11 +4,12 @@ import routes from './routes'
 import db from '../config/db'
 import Logger from '../config/logger'
 import morganMiddlware from './middleware/morganMiddlware'
+import dotenv from 'dotenv'
+dotenv.config()
 
 const app = express()
 
-//busca a porta do arquivo default
-const port = config.get<number>('port')
+const port = process.env.DEFAULT_PORT || 3001
 
 //middlware para log das rotas
 app.use(morganMiddlware)
