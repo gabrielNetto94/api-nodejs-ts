@@ -35,3 +35,5 @@ app.listen(port, async () => {
 
     Logger.info(`server rodando porta ${port}...`)
 })
+
+module.exports = app;
